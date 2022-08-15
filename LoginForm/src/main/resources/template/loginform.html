@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;800&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="demo">Demo</div>
+        <p class="title">Frames for Sketch</p>
+        <div class="desc">
+            <p>Play with Sign-In form to get a feel of how Frames master file</p>
+            <p>
+                works. Every component has its own attributes and styles which
+            </p>
+            <p>
+                can be customized and changed to make a unique experience.
+            </p>
+        </div>
+        <h2>${errorMsg}</h2>
+        <div class="form">
+            <form action="">
+                <div class="form-top">
+                    <div class="sign-in">Sign In</div>
+                    <i id="img-signin" class="fa-solid fa-x fa-xl"></i>
+                </div>
+                <div class="login">
+                    <label class="label" for="login">Login</label>
+                    <div class="inputdiv">
+                        <input class="input" type="text" id="login" name="login">
+                        <i id="lg-img" class="fa-solid fa-circle-check fa-xl"></i>
+                    </div>
+                </div>
+                <div class="login">
+                    <label class="label" for="password">Password</label>
+                    <div class="inputdiv">
+                        <input class="input" type="password" id="password" name="password">
+                        <i id="pw-img" class="fa-solid fa-lock fa-xl"></i>
+                    </div>
+                </div>
+                <button class="btn-login">Login</button>
+            </form>
+            <button class="btn-fb">
+                <p>Continue with Facebook</p>
+                <i id="fb-img" class="fa-brands fa-square-facebook fa-2x"></i>
+            </button>
+            <a class="question" href="loginform.html">Forgot your password?</a>
+        </div>
+        <div class="logo">
+            <img class="logo-img" src="../asset/E3E944B7-42CD-45BE-B869-BFDFFB22152F.png" />
+        </div>
+        <div class="slogan">
+            <p>Visit robowolf.net/frames for the full version</p>
+            <p>and additional information.</p>
+        </div>
+    </div>
+</body>
+
+</html>

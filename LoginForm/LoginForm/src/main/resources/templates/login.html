@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>LoginForm</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;800&family=Roboto&display=swap"
@@ -25,24 +25,34 @@
                 can be customized and changed to make a unique experience.
             </p>
         </div>
-        <h2>${errorMsg}</h2>
+<!--        <h2>${errorMsg}</h2>-->
         <div class="form">
-            <form action="">
+            <form th:action="@{/login}" method="post">
+                <!-- error message -->
+                <div th:if="${param.error}">
+                    <div class="alert alert-danger">Invalid username or
+                        password.</div>
+                </div>
+                <!-- logout message -->
+                <div th:if="${param.logout}">
+                    <div class="alert alert-info">You have been logged out.</div>
+                </div>
+
                 <div class="form-top">
                     <div class="sign-in">Sign In</div>
                     <i id="img-signin" class="fa-solid fa-x fa-xl"></i>
                 </div>
                 <div class="login">
                     <label class="label" for="login">Login</label>
-                    <div class="inputdiv">
-                        <input class="input" type="text" id="login" name="login">
+                    <div class="input_div">
+                        <input class="input" type="text" id="login" name="login" placeholder="Email ID">
                         <i id="lg-img" class="fa-solid fa-circle-check fa-xl"></i>
                     </div>
                 </div>
                 <div class="login">
                     <label class="label" for="password">Password</label>
-                    <div class="inputdiv">
-                        <input class="input" type="password" id="password" name="password">
+                    <div class="input_div">
+                        <input class="input" type="password" id="password" name="password" placeholder="Password">
                         <i id="pw-img" class="fa-solid fa-lock fa-xl"></i>
                     </div>
                 </div>

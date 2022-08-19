@@ -2,10 +2,9 @@ package Spring.LoginForm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 
-@SpringBootApplication
-@ComponentScan("Spring/LoginForm")
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class LoginFormApplication {
 
 	public static void main(String[] args) {
